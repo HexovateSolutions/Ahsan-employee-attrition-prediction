@@ -1,0 +1,18 @@
+{
+  "logistic_regression": {
+    "pipeline": "engineered",
+    "threshold": 0.5,
+    "recall": 0.617,
+    "f1": 0.4793,
+    "roc_auc": 0.7875,
+    "notes": "Interpretable baseline. Catches 29/47 leavers at default threshold."
+  },
+  "random_forest": {
+    "pipeline": "engineered",
+    "threshold": 0.3,
+    "recall": 0.7234,
+    "f1": 0.5231,
+    "roc_auc": 0.7857,
+    "notes": "Strongest practical detector when using tuned threshold 0.30 instead of sklearn default 0.50. Catches ~34/47 leavers."
+  }
+}
