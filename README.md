@@ -8,6 +8,68 @@ employees likely to leave so HR teams can intervene early.
 
 ---
 
+### Streamlit App (New)
+This repository now includes a lightweight Streamlit entry point to support
+future deployment of the attrition prediction workflow in an HR-facing UI.
+
+- App entry point: `app/app.py`
+- Streamlit config: `.streamlit/config.toml`
+- Python dependencies: `requirements.txt`
+
+The current app includes project-appropriate placeholder sections for:
+- Model input
+- Prediction output
+- Explainability (SHAP-ready area)
+
+---
+
+### Quick Start (Streamlit)
+1. Create and activate a virtual environment:
+   - **Linux/macOS**
+     ```bash
+     python -m venv .venv
+     source .venv/bin/activate
+     ```
+   - **Windows (PowerShell)**
+     ```powershell
+     python -m venv .venv
+     .venv\Scripts\Activate.ps1
+     ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Launch the app:
+   ```bash
+   streamlit run app/app.py
+   ```
+
+---
+
+### Repository Structure
+```text
+.
+├── app/
+│   └── app.py
+├── .streamlit/
+│   └── config.toml
+├── Notebook/
+│   └── employee-attrition-prediction.ipynb
+├── models/
+│   ├── feature_columns.pkl
+│   ├── label_encoder.pkl
+│   ├── logistic_regression_model.pkl
+│   ├── model_metadata.json
+│   ├── ohe_columns.pkl
+│   ├── random_forest_model.pkl
+│   └── scaler.pkl
+├── requirements.txt
+├── Report.pdf
+└── README.md
+```
+
+---
+
 ### Models Trained
 - Logistic Regression
 - Decision Tree
@@ -104,6 +166,5 @@ IBM HR Analytics Employee Attrition dataset
 | Kaggle Notebook (CPU) | Platform |
 
 ---
-
 
 
